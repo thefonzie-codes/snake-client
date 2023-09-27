@@ -15,6 +15,10 @@ const connect = () => {
 
   conn.on('connect', () => {
     console.log("Snek time!!!");
+    
+    // for (let i = 0; i < 5; i++) {
+    //   setTimeout((i) => conn.write("Move: up"), i * 500)
+    // }
   });
   
   conn.write("Name: FNZ");
