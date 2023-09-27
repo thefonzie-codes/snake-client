@@ -30,6 +30,18 @@ const handleUserInput = (conn) => {
   connection.write("Move: right")
   }
 
+  if (conn === 'q') {
+  connection.write("Say: YES, IT MOVES")
+  }
+
+  if (conn === 'e') {
+  connection.write("Say: EZ")
+  }
+
+  if (conn === 'e') {
+  connection.write("Say: POG")
+  }
+
   if (conn === '\u0003') {
   console.log("exiting")
   process.exit();
