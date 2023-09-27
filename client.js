@@ -1,3 +1,5 @@
+const net = require("net");
+
 const connect = () => {
   const conn = net.createConnection(
   {
@@ -10,6 +12,12 @@ const connect = () => {
   conn.on('data', (data) => {
     console.log(data)
   });
+
+  conn.on('connect', () => {
+    console.log("Snek time!!!");
+  });
+  
+  conn.write("Name: FNZ");
 
 return conn;
 };
