@@ -1,4 +1,9 @@
-const setupInput = () => {
+let connection;
+
+const setupInput = (conn) => {
+
+  connection = conn;
+
   const stdin = process.stdin;
   stdin.on("data", handleUserInput)
   stdin.setRawMode(true);
@@ -7,9 +12,25 @@ const setupInput = () => {
   return stdin;
 };
 
-const handleUserInput = (key) => {
+const handleUserInput = (conn) => {
 
-  if (key === '\u0003') {
+  if (conn === 'w') {
+  connection.write("Move: up")
+  }
+
+  if (conn === 'a') {
+  connection.write("Move: left")
+  }
+
+  if (conn === 's') {
+  connection.write("Move: down")
+  }
+
+  if (conn === 'd') {
+  connection.write("Move: right")
+  }
+
+  if (conn === '\u0003') {
   console.log("exiting")
   process.exit();
   }
