@@ -31,15 +31,19 @@ const handleUserInput = (conn) => {
   }
 
   if (conn === 'q') {
-  connection.write("Say: YES, IT MOVES")
+  connection.write("Say: Hiiiiii!")
   }
 
   if (conn === 'e') {
   connection.write("Say: EZ")
   }
 
-  if (conn === 'e') {
+  if (conn === 'x') {
   connection.write("Say: POG")
+  }
+
+  if (conn === 'x') {
+  connection.write("Say: Boop")
   }
 
   if (conn === '\u0003') {
